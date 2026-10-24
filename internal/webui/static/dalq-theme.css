@@ -1,0 +1,104 @@
+/* Tema DALQ. Turquesa extraído do símbolo do logo: #38b2c2.
+   Bootstrap original preservado. Tons escuros mantêm a legibilidade. */
+:root {
+  --dalq-brand: #38b2c2;
+  --dalq-dark: #176d78;
+  --dalq-light: #e8f6f8;
+  --bs-primary: var(--dalq-dark);
+  --bs-primary-rgb: 23, 109, 120;
+  --bs-primary-bg-subtle: var(--dalq-light);
+  --bs-primary-border-subtle: #ade0e7;
+  --bs-primary-text-emphasis: #124e56;
+  --bs-link-color: var(--dalq-dark);
+  --bs-link-color-rgb: 23, 109, 120;
+  --bs-link-hover-color: #124e56;
+  --bs-link-hover-color-rgb: 18, 78, 86;
+  --bs-focus-ring-color: rgba(56, 178, 194, .3);
+}
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--dalq-dark);
+  --bs-btn-border-color: var(--dalq-dark);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #124e56;
+  --bs-btn-hover-border-color: #124e56;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--dalq-dark);
+  --bs-btn-active-border-color: var(--dalq-dark);
+  --bs-btn-disabled-color: #102c30;
+  --bs-btn-disabled-bg: var(--dalq-brand);
+  --bs-btn-disabled-border-color: var(--dalq-brand);
+  --bs-btn-focus-shadow-rgb: 56, 178, 194;
+}
+.btn-outline-primary {
+  --bs-btn-color: var(--dalq-dark);
+  --bs-btn-border-color: var(--dalq-dark);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--dalq-dark);
+  --bs-btn-hover-border-color: var(--dalq-dark);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #124e56;
+  --bs-btn-active-border-color: #124e56;
+  --bs-btn-disabled-color: var(--dalq-dark);
+  --bs-btn-disabled-border-color: var(--dalq-dark);
+  --bs-btn-focus-shadow-rgb: 56, 178, 194;
+}
+.pagination {
+  --bs-pagination-color: var(--dalq-dark);
+  --bs-pagination-hover-color: #124e56;
+  --bs-pagination-hover-bg: var(--dalq-light);
+  --bs-pagination-focus-color: var(--dalq-dark);
+  --bs-pagination-focus-box-shadow: 0 0 0 .25rem rgba(56, 178, 194, .25);
+  --bs-pagination-active-color: #fff;
+  --bs-pagination-active-bg: var(--dalq-dark);
+  --bs-pagination-active-border-color: var(--dalq-dark);
+}
+.form-control:focus, .form-select:focus {
+  border-color: var(--dalq-brand);
+  box-shadow: 0 0 0 .25rem rgba(56, 178, 194, .2);
+}
+.nav-tabs {
+  --bs-nav-tabs-link-active-color: var(--dalq-dark);
+  --bs-nav-tabs-link-active-bg: var(--dalq-light);
+  --bs-nav-tabs-link-active-border-color: #ade0e7 #ade0e7 #fff;
+}
+.nav-tabs .nav-link.active { font-weight: 700; }
+.result-section-header, .modal-header {
+  background-color: var(--dalq-light);
+  border-bottom-color: #ade0e7;
+  color: var(--dalq-dark);
+}
+.result-section-header { border-left: .25rem solid var(--dalq-brand); }
+/* Modal estável entre abas, limitado à tela.
+   Em celulares, modal-fullscreen-sm-down já ocupa a altura disponível. */
+@media (min-width: 576px) {
+  #company-modal .modal-content {
+    height: min(720px, calc(100vh - 3.5rem));
+    height: min(720px, calc(100dvh - 3.5rem));
+  }
+}
+
+/* Listas crescem com as linhas. Rolagem horizontal somente em telas menores. */
+.table-responsive-lg { height: auto; max-height: none; }
+@media (max-width: 991.98px) {
+  .table-responsive-lg { overflow-y: hidden; }
+}
+@media (min-width: 992px) {
+  .table-responsive-lg { overflow: visible; }
+}
+
+/* Títulos e cabeçalhos: cinza escuro da paleta nativa do Bootstrap. */
+h1, h2, h3, h4, h5, h6, .table th, .form-label,
+.nav-tabs .nav-link {
+  color: var(--bs-gray-700);
+}
+.nav-tabs {
+  --bs-nav-tabs-link-active-color: var(--bs-gray-700);
+}
+
+/* Padrão dos títulos dos dados nas abas do modal. */
+#company-modal .modal-field-label,
+#company-modal .table th {
+  color: var(--bs-gray-700);
+  font-weight: 600;
+}

@@ -1,0 +1,6 @@
+/config.json
+.env
+*:Zone.Identifier
+/cnpj-explorer
+/cnpj-explorer.exe
+/bin/
